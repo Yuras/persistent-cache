@@ -1,13 +1,14 @@
 
-var _elm_lang$persistent_cache$Native_LocalStorage = function() {
+var _Yuras$persistent_cache$Native_LocalStorage = function() {
+
+function disabled()
+{
+	return _elm_lang$core$Native_Scheduler.fail({ ctor: 'Disabled' });
+}
+
 
 if (!localStorage || !localStorage.getItem || !localStorage.setItem)
 {
-	function disabled()
-	{
-		return _elm_lang$core$Native_Scheduler.fail({ ctor: 'Disabled' });
-	}
-
 	return {
 		get: disabled,
 		set: F2(disabled),
